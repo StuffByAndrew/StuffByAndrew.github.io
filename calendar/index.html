@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Andrew Xie's calendar and availability.">
+  <title>Calendar | Andrew Xie</title>
+  <link rel="icon" href="/images/Axieprofile.jpg">
+  <link rel="stylesheet" href="/stylesheet.css">
+  <link rel="stylesheet" href="/calendar/calendar.css">
+  <script src="/calendar/calendar.js" defer></script>
+</head>
+<body>
+  <main class="calendar-page">
+    <nav aria-label="Main navigation"><a href="/">&larr; Andrew Xie</a></nav>
+    <h1>Calendar</h1>
+    <p>Blocked times are marked as busy.</p>
+    <p id="calendar-notice" hidden></p>
+    <p class="calendar-timezone">All times are shown in Eastern Time (America/New_York).</p>
+    <p id="calendar-status" role="status">Calendar availability is currently unavailable.</p>
+    <div id="calendar-container" class="calendar-container" hidden>
+      <p class="calendar-mobile-hint" id="calendar-scroll-hint">Scroll sideways to see the full week.</p>
+      <div class="calendar-scroll" tabindex="0" role="region" aria-label="Weekly availability" aria-describedby="calendar-scroll-hint">
+        <iframe id="calendar-frame" title="Andrew Xie's calendar availability" width="800" height="650" referrerpolicy="no-referrer"></iframe>
+      </div>
+      <p><a id="calendar-link" target="_blank" rel="noopener noreferrer">Open calendar in a new tab &nearr;</a></p>
+    </div>
+    <noscript><p>Enable JavaScript to view my calendar.</p></noscript>
+    <p class="calendar-contact">Please <a href="mailto:andrewxie@g.harvard.edu">email me</a> to confirm a time to meet.</p>
+  </main>
+</body>
+</html>
