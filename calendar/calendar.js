@@ -9,11 +9,6 @@
     const response = await fetch('/calendar/config.json');
     if (!response.ok) throw new Error('Calendar configuration unavailable');
     const config = await response.json();
-    if (config.notice) {
-      const notice = document.getElementById('calendar-notice');
-      notice.textContent = config.notice;
-      notice.hidden = false;
-    }
     const calendarIds = [...new Set(config.calendarIds.map(id => id.trim()).filter(Boolean))];
     if (!calendarIds.length) throw new Error('No calendars configured');
 
